@@ -4,11 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 const SearchBox = () => {
   const dispatch = useDispatch();
-  const filter = useSelector((state) => state.filters.name);
+  const filter = useSelector((state) => state.filters.query);
 
   const handleChange = (event) => {
-    const action = changeFilter(event.target.value);
-    dispatch(action);
+    dispatch(changeFilter(event.target.value));
   };
 
   return (

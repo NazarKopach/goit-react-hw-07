@@ -3,7 +3,7 @@ import { addProfileSchema } from "../../utils/schemas";
 import styles from "./ContactsForm.module.css";
 import { nanoid } from "nanoid";
 import { useSelector, useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsSlice";
+import { addContact } from "../../redux/contactsOps";
 import { selectContacts } from "../../redux/contactsSlice";
 
 const initialValues = {
