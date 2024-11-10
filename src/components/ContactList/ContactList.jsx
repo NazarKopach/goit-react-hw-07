@@ -2,11 +2,11 @@ import styles from "./ContactList.module.css";
 import Contact from "../Contact/Contact";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteContact } from "../../redux/contactsOps";
-import { selectFilteredContacts } from "../../redux/contactsSlice";
+import { selectVisibleContacts } from "../../redux/contactsSlice";
 
 const ContactList = () => {
   const dispatch = useDispatch();
-  const filteredContacts = useSelector(selectFilteredContacts);
+  const filteredContacts = useSelector(selectVisibleContacts);
 
   const handleDeleteProfile = (profileId) => {
     dispatch(deleteContact(profileId));
